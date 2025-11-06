@@ -11,6 +11,7 @@ import News from './components/News'
 
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Layout from './Layout'
+// import ChatBot from './components/Chatboat'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       {
         path:'/news',
         Component:News
-      }
+      },
+      // {
+      //   path:'/chatboat',
+      //   Component:ChatBot
+      // }
     ]
   },
   {

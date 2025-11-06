@@ -1,54 +1,114 @@
-const News = () => {
+import React from "react";
+import News from "./News";
 
-    return (
-        <div className="max-w-lg w-full bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-            {/* Header */}
-            <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-3">
-                    <a href="" target="_blank" rel="noopener noreferrer" className="flex-shrink: 0">
-                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200" alt="" className="w-12 h-12 rounded-full object-cover border border-gray-200" />
-                    </a>
-                    <div className="min-w-0 flex-1">
-                        <div className="flex items-center space-x-1">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 hover:underline truncate" >
-                                Alex Johnson
-                            </a>
-                            <svg className="w-4 h-4 text-blue-500 flex-shrink: 0" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z" />
-                            </svg>
-                        </div>
-                        <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm hover:underline" >
-                            @userhandle
-                        </a>
-                    </div>
-                </div>
-                <a href="" target="_blank" rel="noopener noreferrer" className="flex-shrink: 0 text-blue-400 hover:text-blue-600 transition-colors" >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                </a>
-            </div>
+const NewsSection = () => {
+  const newsData = [
+    {
+      id: 1,
+      author: "Priya Verma",
+      handle: "@priyaverma_ai",
+      avatar:
+        "https://randomuser.me/api/portraits/women/68.jpg",
+      content:
+        "🌾 New AI-powered irrigation system launched in Lucknow! Saves 30% water while boosting crop yield. #AgriTech #FarmBoost",
+      image:
+        "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200",
+      timestamp: "9:00 AM · Nov 6, 2025",
+    },
+    {
+      id: 2,
+      author: "Ravi Kumar",
+      handle: "@ravikumar_dev",
+      avatar:
+        "https://randomuser.me/api/portraits/men/54.jpg",
+      content:
+        "Farmers’ market app now supports instant payment and live price tracking 🪙. Seamless experience built with React & Node.js.",
+      image:
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200",
+      timestamp: "4:30 PM · Nov 5, 2025",
+    },
+    {
+      id: 3,
+      author: "Anita Sharma",
+      handle: "@anita_farms",
+      avatar:
+        "https://randomuser.me/api/portraits/women/43.jpg",
+      content:
+        "Excited to announce our partnership with FarmBoost to bring organic produce directly to consumers 🍅💚.",
+      image:
+        "https://images.unsplash.com/photo-1602524202409-3c6d57e9e3d9?q=80&w=1200",
+      timestamp: "7:20 PM · Nov 3, 2025",
+    },
+  ];
 
-            {/* Content */}
-            <div className="mb-3">
-                <p className="text-gray-900 text-sm leading-relaxed whitespace-pre-wrap">
-                    Just deployed my new portfolio website! 🚀 Built with React and Tailwind CSS. Check out the clean design and
-                    smooth animations ✨ #webdev #portfolio
-                </p>
-            </div>
-
-            {/* Image */}
-            <div className="mb-3">
-                <div className="rounded-xl overflow-hidden border border-gray-200">
-                    <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/template/placeholder_01.svg" alt="" className="w-full h-64 object-cover"
-                    />
-                </div>
-            </div>
-
-            {/* Timestamp */}
-            <div className="text-gray-500 text-xs">1:15 PM · Dec 20, 2024</div>
+  return (
+    <section className="py-10 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#008585]">
+            Latest News & Updates
+          </h2>
+          <p className="text-gray-600 mt-2 text-sm sm:text-base">
+            Stay updated with the latest innovations, success stories, and tech in modern farming.
+          </p>
         </div>
-    )
-}
 
-export default News;
+        {/* News Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {newsData.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition duration-200"
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={item.avatar}
+                    alt={item.author}
+                    className="w-10 h-10 rounded-full border border-gray-200"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">
+                      {item.author}
+                    </h3>
+                    <span className="text-gray-500 text-sm">
+                      {item.handle}
+                    </span>
+                  </div>
+                </div>
+                <svg
+                  className="w-5 h-5 text-[#008585]"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </div>
+
+              {/* Content */}
+              <p className="text-gray-800 text-sm mb-3 leading-relaxed">
+                {item.content}
+              </p>
+
+              {/* Image */}
+              <div className="rounded-xl overflow-hidden border border-gray-200 mb-3">
+                <img
+                  src={item.image}
+                  alt="News visual"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+
+              {/* Timestamp */}
+              <div className="text-gray-500 text-xs">{item.timestamp}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewsSection;

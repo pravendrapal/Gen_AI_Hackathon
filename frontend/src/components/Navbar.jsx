@@ -7,7 +7,7 @@ import './Navbar.css'
 export default function Navbar() {
     const [open, setOpen] = React.useState(false)
     return (
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white fixed left-0 right-0 transition-all">
+        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
             <div className="flex h-16 items-center">
               <NavLink className="block text-teal-600" to="/">
@@ -36,6 +36,7 @@ export default function Navbar() {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/products">Products</NavLink>
                 <NavLink to="/news">News</NavLink>
+                <NavLink to="/chatboat">Chat With us</NavLink>
 
                 <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
                     <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />

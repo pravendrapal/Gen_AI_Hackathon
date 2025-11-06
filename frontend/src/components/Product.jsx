@@ -2,37 +2,73 @@ export default function ProductGrid() {
   const products = [
     {
       id: 1,
-      name: "Chris Jordan",
+      name: "Wheat Grade A",
       price: 29.0,
       image:
-        "https://images.unsplash.com/photo-1657560566744-06d0b69f6647?q=80&w=600&auto=format&fit=crop",
+        "https://tse4.mm.bing.net/th/id/OIP.7IPKMmhqxR4YCCRPM1HNPwHaDt?pid=Api&P=0&h=180",
       description:
         "Looks amazing out of the box. I barely had to customize anything.",
     },
     {
       id: 2,
-      name: "Sofia Harper",
+      name: "Paddy Crop",
       price: 45.5,
       image:
-        "https://images.unsplash.com/photo-1606813907291-fd6b77f07b18?q=80&w=600&auto=format&fit=crop",
+        "https://tse4.mm.bing.net/th/id/OIP.2Pdff2T3hzJGiRZHzNwLWgHaE7?pid=Api&P=0&h=180",
       description:
         "Beautiful design and perfect for any modern setup. Totally worth it.",
     },
     {
       id: 3,
-      name: "Ethan Brooks",
+      name: "Maiz Crop",
       price: 19.99,
       image:
-        "https://images.unsplash.com/photo-1616627562051-4b48eb2a3d0e?q=80&w=600&auto=format&fit=crop",
+        "https://www.wynnstay.co.uk/media/wysiwyg/Blog_images/_YieldON_Crop_Update.png",
       description:
         "High quality and durable product. I use it daily and love it.",
     },
     {
       id: 4,
-      name: "Lara Smith",
+      name: "Sugarcane",
       price: 59.0,
       image:
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?q=80&w=600&auto=format&fit=crop",
+        "https://tse1.mm.bing.net/th/id/OIP.arVKLrCp_OZ3Mic57GHIHgHaCf?pid=Api&P=0&h=180",
+      description:
+        "Elegant and stylish. Makes my workspace look amazing!",
+    },
+    {
+      id: 5,
+      name: "Mustard",
+      price: 29.0,
+      image:
+        "https://i.ytimg.com/vi/D-a2cIPjQNU/maxresdefault.jpg",
+      description:
+        "Looks amazing out of the box. I barely had to customize anything.",
+    },
+    {
+      id: 6,
+      name: "Soybean",
+      price: 45.5,
+      image:
+        "https://tse2.mm.bing.net/th/id/OIP.Gl7IAVjND04y9zOhzh1hHAHaE8?pid=Api&P=0&h=180",
+      description:
+        "Beautiful design and perfect for any modern setup. Totally worth it.",
+    },
+    {
+      id: 7,
+      name: "Ground Nuts",
+      price: 19.99,
+      image:
+        "https://tse1.mm.bing.net/th/id/OIP.n1pEtv37q2dA4zFNU-v0vwHaE7?pid=Api&P=0&h=180",
+      description:
+        "High quality and durable product. I use it daily and love it.",
+    },
+    {
+      id: 4,
+      name: "Potato",
+      price: 59.0,
+      image:
+        "https://seasol.co.nz/wp-content/uploads/2021/10/AdobeStock_290848444.jpeg",
       description:
         "Elegant and stylish. Makes my workspace look amazing!",
     },
@@ -60,7 +96,7 @@ export default function ProductGrid() {
                 alt={product.name}
               />
               <div className="p-4 text-sm">
-                <p className="text-slate-600">$ {product.price.toFixed(2)}</p>
+                <p className="text-slate-600">₹ {product.price.toFixed(2)}</p>
                 <p className="text-slate-800 text-base font-medium my-1.5">
                   {product.name}
                 </p>

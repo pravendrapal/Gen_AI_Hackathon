@@ -18,10 +18,10 @@ export default function Footer() {
 
                         <div className="flex items-center ml-2 uppercase text-[#008585]">
                             <div>
-                                <h2 className="font-bold text-xl ">
+                                <h2 className="font-bold text-xl text-[#008585]">
                                     FarmBoost
                                 </h2>
-                                <h2 className="text-xs">
+                                <h2 className="text-xs text-[#c7522a] ">
                                     New way Farming
                                 </h2>
                             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
             </div>
             <p className="py-4 text-center text-xs md:text-sm text-gray-500">
-                Copyright 2024 © <a href="https://prebuiltui.com">PrebuiltUI</a>. All Right Reserved.
+                Copyright 2025 © <a href="#">FarmBoost</a>. All Right Reserved.
             </p>
         </footer>
     );
