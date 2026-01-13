@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import Logo from '/FarmBoost.png'
+import Logo from '/FarmBoost (1).png'
 
 export default function Footer() {
     return (

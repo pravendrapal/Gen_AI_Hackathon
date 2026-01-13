@@ -1,7 +1,7 @@
 import React from "react";
 import heroImg from "/image_1.png";
 import ProductGrid from "./Product";
-import ChatBot from "./Chatboat";
+import ChatBot from "./Chatbot";
 
 export default function Hero() {
   return (
@@ -53,7 +53,8 @@ export default function Hero() {
       {/* 🛒 Product Section */}
       <section className="mt-10 mb-8">
         <ProductGrid />
-        <ChatBot />
+        
+        {/* <ChatBot /> */}
       </section>
     </>
   );

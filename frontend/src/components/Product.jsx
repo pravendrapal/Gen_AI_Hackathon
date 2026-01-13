@@ -1,11 +1,13 @@
+import { useState } from "react";
+
 export default function ProductGrid() {
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
       name: "Wheat Grade A",
       price: 29.0,
       image:
-        "https://tse4.mm.bing.net/th/id/OIP.7IPKMmhqxR4YCCRPM1HNPwHaDt?pid=Api&P=0&h=180",
+        "https://plantix.net/en/library/assets/custom/crop-images/wheat.jpeg",
       description:
         "Looks amazing out of the box. I barely had to customize anything.",
     },
@@ -41,7 +43,7 @@ export default function ProductGrid() {
       name: "Mustard",
       price: 29.0,
       image:
-        "https://i.ytimg.com/vi/D-a2cIPjQNU/maxresdefault.jpg",
+        "https://t4.ftcdn.net/jpg/03/80/47/69/360_F_380476979_o0mtDd5yCwgvLcUeepuFXZSeY1FPoxRS.jpg",
       description:
         "Looks amazing out of the box. I barely had to customize anything.",
     },
@@ -50,7 +52,7 @@ export default function ProductGrid() {
       name: "Soybean",
       price: 45.5,
       image:
-        "https://tse2.mm.bing.net/th/id/OIP.Gl7IAVjND04y9zOhzh1hHAHaE8?pid=Api&P=0&h=180",
+        "https://tse1.mm.bing.net/th/id/OIP.GQB5IpbBWnQucUqz8fnVoAHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       description:
         "Beautiful design and perfect for any modern setup. Totally worth it.",
     },
@@ -64,7 +66,7 @@ export default function ProductGrid() {
         "High quality and durable product. I use it daily and love it.",
     },
     {
-      id: 4,
+      id: 8,
       name: "Potato",
       price: 59.0,
       image:
@@ -72,7 +74,30 @@ export default function ProductGrid() {
       description:
         "Elegant and stylish. Makes my workspace look amazing!",
     },
-  ];
+  ]);
+
+  const [newProduct, setNewProduct] = useState({
+    name: "",
+    price: "",
+    image: "",
+    description: "",
+  });
+
+  const handleAddProduct = (e) => {
+    e.preventDefault();
+
+    const productToAdd = {
+      id: products.length + 1,
+      ...newProduct,
+      price: parseFloat(newProduct.price),
+    };
+
+    setProducts([...products, productToAdd]);
+
+    alert("Product added!");
+
+    setNewProduct({ name: "", price: "", image: "", description: "" });
+  };
 
   return (
     <>
@@ -83,6 +108,7 @@ export default function ProductGrid() {
         }
       `}</style>
 
+      {/* Product Grid */}
       <div className="min-h-screen bg-slate-100 flex items-center justify-center py-10 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product) => (
@@ -115,6 +141,61 @@ export default function ProductGrid() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Add Product Section */}
+      <div className="max-w-md mx-auto my-12 p-6 bg-white shadow-xl rounded-xl">
+        <h2 className="text-xl font-semibold text-slate-800 mb-4 text-center">
+          Add New Product
+        </h2>
+
+        <form onSubmit={handleAddProduct} className="space-y-3">
+          <input
+            type="text"
+            placeholder="Product Name"
+            value={newProduct.name}
+            onChange={(e) =>
+              setNewProduct({ ...newProduct, name: e.target.value })
+            }
+            className="w-full border p-2 rounded-md"
+          />
+
+          <input
+            type="number"
+            placeholder="Price"
+            value={newProduct.price}
+            onChange={(e) =>
+              setNewProduct({ ...newProduct, price: e.target.value })
+            }
+            className="w-full border p-2 rounded-md"
+          />
+
+          <input
+            type="text"
+            placeholder="Image URL"
+            value={newProduct.image}
+            onChange={(e) =>
+              setNewProduct({ ...newProduct, image: e.target.value })
+            }
+            className="w-full border p-2 rounded-md"
+          />
+
+          <textarea
+            placeholder="Short Description"
+            value={newProduct.description}
+            onChange={(e) =>
+              setNewProduct({ ...newProduct, description: e.target.value })
+            }
+            className="w-full border p-2 rounded-md h-24"
+          ></textarea>
+
+          <button
+            type="submit"
+            className="w-full bg-slate-800 text-white py-2 rounded-md hover:bg-slate-900 transition"
+          >
+            Add Product
+          </button>
+        </form>
       </div>
     </>
   );

@@ -5,15 +5,15 @@ const NewsSection = () => {
   const newsData = [
     {
       id: 1,
-      author: "Priya Verma",
-      handle: "@priyaverma_ai",
+      author: "Shivam Dwivedi",
+      handle: "@shivam_dwivedi ",
       avatar:
         "https://randomuser.me/api/portraits/women/68.jpg",
       content:
-        "🌾 New AI-powered irrigation system launched in Lucknow! Saves 30% water while boosting crop yield. #AgriTech #FarmBoost",
+        "Hidden Cracks Policymakers Must Fix: A Blueprint for Sustainable and Resilient Indian Agriculture",
       image:
-        "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200",
-      timestamp: "9:00 AM · Nov 6, 2025",
+        "https://kjcdn.gumlet.io/media/105619/indian-agriculture.jpg",
+      timestamp: "10:16 AM · Oct 27, 2025",
     },
     {
       id: 2,
@@ -22,9 +22,9 @@ const NewsSection = () => {
       avatar:
         "https://randomuser.me/api/portraits/men/54.jpg",
       content:
-        "Farmers’ market app now supports instant payment and live price tracking 🪙. Seamless experience built with React & Node.js.",
+        "From Serving the Nation to Serving the Soil: Retired Army Officer Leads Organic Farming with High-Density Apple Orchard in Himachal",
       image:
-        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200",
+        "https://kjcdn.gumlet.io/media/105791/4.jpg",
       timestamp: "4:30 PM · Nov 5, 2025",
     },
     {
@@ -36,7 +36,7 @@ const NewsSection = () => {
       content:
         "Excited to announce our partnership with FarmBoost to bring organic produce directly to consumers 🍅💚.",
       image:
-        "https://images.unsplash.com/photo-1602524202409-3c6d57e9e3d9?q=80&w=1200",
+        "https://tse1.mm.bing.net/th/id/OIP.mtyNL3QXDVotGFwsNS-4FQHaDt?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       timestamp: "7:20 PM · Nov 3, 2025",
     },
   ];
@@ -64,11 +64,11 @@ const NewsSection = () => {
               {/* Header */}
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center space-x-3">
-                  <img
+                  {/* <img
                     src={item.avatar}
                     alt={item.author}
                     className="w-10 h-10 rounded-full border border-gray-200"
-                  />
+                  /> */}
                   <div>
                     <h3 className="font-semibold text-gray-900">
                       {item.author}
@@ -78,13 +78,13 @@ const NewsSection = () => {
                     </span>
                   </div>
                 </div>
-                <svg
+                {/* <svg
                   className="w-5 h-5 text-[#008585]"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
+                </svg> */}
               </div>
 
               {/* Content */}

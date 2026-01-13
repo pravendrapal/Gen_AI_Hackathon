@@ -80,10 +80,3 @@ export default function Navbar() {
         </nav>
     )
 }
-
-// const Navbar = ()=> {
-//     return(
-//         <h1>Pravendra Pal</h1>
-//     )
-// }
-// export default Navbar

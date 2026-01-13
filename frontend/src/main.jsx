@@ -8,10 +8,12 @@ import Login from './components/Login'
 import Footer from './components/Footer'
 import Products from './components/Product'
 import News from './components/News'
+import AddCrop from './components/Addproducts'
+import Signup from './components/Signup'
 
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Layout from './Layout'
-// import ChatBot from './components/Chatboat'
+// import ChatBot from './components/Chatbot'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
         Component:News
       },
       // {
+      //   path:'/products',
+      //   Component:AddCrop
+      // },
+      // {
       //   path:'/chatboat',
       //   Component:ChatBot
       // }
@@ -39,6 +45,10 @@ const router = createBrowserRouter([
   {
     path:'/login',
     Component:Login
+  },
+  {
+    path:'/register',
+    Component:Signup
   }
 ])
 
